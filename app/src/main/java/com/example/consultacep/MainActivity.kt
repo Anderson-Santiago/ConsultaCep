@@ -47,8 +47,7 @@ class MainActivity : AppCompatActivity() {
 
         retrofitData.enqueue(object : Callback<MyDataItem> {
             override fun onResponse(call: Call<MyDataItem>, response: Response<MyDataItem>) {
-
-                if (response.isSuccessful) {
+                if (response.isSuccessful && !response.body()?.cep.isNullOrBlank()) {
                     binding.textCep.text = "Cep: ${response.body()?.cep}"
                     binding.textLogadouro.text = "Logadouro: ${response.body()?.logradouro}"
                     binding.textBairro.text = "Bairro: ${response.body()?.bairro}"
@@ -58,14 +57,14 @@ class MainActivity : AppCompatActivity() {
                 } else {
                     Toast.makeText(
                         this@MainActivity,
-                        "Erro ao consultar o Cep: " + response.message(),
+                        "Erro ao consultar o Cep",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
             }
 
             override fun onFailure(call: Call<MyDataItem>, t: Throwable) {
-                Log.d("MainActivity", "ERRO" + t.message)
+                Log.d("MainActivity", "ERROR" + t.message)
             }
         })
     }
