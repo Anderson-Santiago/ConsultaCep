@@ -23,7 +23,16 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.btnConsult.setOnClickListener {
-            getMyData()
+            val codeCep = binding.codeCep.text.toString()
+            if(codeCep.length > 8 || codeCep.length < 8){
+                Toast.makeText(
+                    this,
+                    "Dados invalidos, por favor consulte e tente novamente!",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }else{
+                getMyData()
+            }
         }
     }
 
