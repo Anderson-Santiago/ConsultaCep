@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ConsultaCep</string>
+    <string name="consultar">CONSULTAR</string>
+    <string name="digite_o_cep_e_clique_em_consultar">DIGITE O CEP E CLIQUE EM CONSULTAR</string>
+</resources>
