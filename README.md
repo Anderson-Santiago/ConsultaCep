@@ -6,7 +6,6 @@ App simples feito em Kotlin consumindo API/REST da https://viacep.com.br, com ce
 - [x] Tratamento de erros da API
 - [x] Tratamento com cep menores ou maiores que 8 (padrão)
 - [x] Cep inválidos
-- [x] Testes Unitários
 
 ## Imagens
 ![WhatsApp Image 2022-07-04 at 18 20 37 (1)](https://user-images.githubusercontent.com/48536939/177217538-7569ed3a-a82a-49c3-a18e-426f04fc7a38.jpeg)
